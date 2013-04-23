@@ -1,0 +1,155 @@
+body {
+  background: #333;
+}
+
+#logo{
+	float:left;
+	width: 400px;
+	margin-top: 20px;
+	margin-left: 80px;
+}
+
+#map {
+  float:left;
+  margin-left:80px;
+  margin-top: 10px;
+  background: #fff;
+  width: 600px;
+  height: 375px;
+  border-radius: 12px; 
+  -moz-border-radius: 12px; 
+  -webkit-border-radius: 12px; 
+  border: 3px solid #00ffde;
+}
+
+circle {
+  fill: #40205f;
+  stroke-width: 5px;
+}
+
+#info {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+
+}
+
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: 1px;
+  stroke-opacity: .5;
+}
+
+.land {
+  fill: #333;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.state-boundary {
+  fill: none;
+  stroke: #fff;
+}
+
+.brush .extent {
+  fill: #00ffde;
+  fill-opacity: .1;
+  stroke: #00ffde;
+}
+
+footer
+{
+	position:relative;
+}
+/* Twitter styles */
+#twitter-feed {
+	float:left;
+	margin-top: 10px;
+	width:258px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 20px;
+	padding:8px 10px 5px 10px;
+	border-radius:12px;
+    -moz-border-radius: 12px; 
+    -webkit-border-radius: 12px; 
+  	border: 3px solid #00ffde;
+	background-color:#FFF;
+	color:#333;
+	overflow:auto;
+}
+#twitter-feed h1 {
+	color:#5F5F5F;
+	margin:0px;
+	padding:9px 0px 9px 0px;
+	font-size:18px;
+	font-weight:lighter;	
+}
+.twitter-article, #loading-container {
+	width:258px;
+	border-top:1px dotted #CCC;
+	float:left;	
+	padding:8px 0px 8px 0px;
+}
+#loading-container {
+	padding:16px 0px 16px 0px;
+	text-align:center;	
+}
+.twitter-pic {
+	float:left;
+}
+
+.twitter-pic img {
+	float:left;
+	border-radius:7px;	
+	border:none;
+	
+}
+ img  {
+	 border:none;
+ }
+.twitter-text p {
+	margin:0px;
+	line-height:15px;	
+}
+.twitter-text a,  h1 a {
+	color: #00ffde;
+	text-decoration: none;
+}
+.twitter-text a:hover,  h1 a:hover {
+	text-decoration: underline;
+	color: #00ffde;
+}
+
+.twitter-text {
+	width:204px;
+	float:left;
+	font-size:11px;
+	padding-left: 11px;
+}
+
+.tweet-time {
+	font-size:10px;
+	color:#878787;
+	float:right;
+}
+.tweet-time a, .tweet-time a:hover {
+	color:#878787;
+}
+
+.backlink {
+	font-size:11px;
+	text-align:center;
+}
+.tweetprofilelink a {
+	color:#444;
+}
+.tweetprofilelink a:hover {
+	color:#444;
+}
+.backlink a {
+	color:#aaa;
+}
+
+
+
