@@ -60,6 +60,11 @@ var T = new twit({
 var server = http.createServer(app);
 var io = socket.listen(server);
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 /*============================================	
   Pull location from map, query Twitter Stream
 ==============================================*/

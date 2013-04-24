@@ -6,7 +6,7 @@
 
 var socket = io.connect();
 if(!updatedStream)
-	var updatedStream = '';
+	var updatedStream = '<img src="/images/ajax-loader.gif">';
 
 /*============================================	
  	 		 Map Initialization 
