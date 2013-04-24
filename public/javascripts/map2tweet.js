@@ -74,12 +74,37 @@ function brushed() {
  var y1 = Math.round(42.00 + e[0][1] / 130000.00);
  var x2 = Math.round(-98.00 + e[1][0] / 80000.00);
  var y2 = Math.round(42.00 + e[1][1] / 130000.00);
- var loc = [x1, y1, x2, y2];
- info.text("[ '" + formatNumber(x1)
-      + "', '" + formatNumber(y1)
-      + "', '" + formatNumber(x2)
-      + "', '" + formatNumber(y2)
-      + "' ]");
+ var xMin, xMax, yMin, yMax;
+
+ if(x1>x2){
+ 	xMax = x1;
+ 	xMin = x2;
+ }
+ else{
+ 	xMax = x2;
+ 	xMin = x1;
+ }
+
+ if(y1>y2){
+ 	yMax = y1;
+ 	yMin = y2;
+ }
+ else{
+ 	yMax = y2;
+ 	yMin = y1;
+ }
+ 
+ var loc = [xMin, yMin, xMax, yMax];
+ var formatLoc = ('<div style="float:left"><div class="loctext">'+"minLat: "+'</div>'+
+ 	'<div class="locnum">'+formatNumber(xMin)+'</div></div>'+
+ 	'<div style="float:right"><div class="loctext">'+"minLong: "+'</div>'+
+ 	'<div class="locnum">'+formatNumber(yMin)+'</div></div>'+
+ 	'<div style="float:left"><div class="loctext">'+"maxLat: "+'</div>'+
+ 	'<div class="locnum">'+formatNumber(xMax)+'</div></div>'+
+ 	'<div style="float:right"><div class="loctext">'+"maxLong: "+'</div>'+
+ 	'<div class="locnum">'+formatNumber(yMax)+'</div></div>');
+   
+ $('#coords').html(formatLoc);
  updatedStream = '';
  socket.emit('brushed', loc);
 }
@@ -125,7 +150,7 @@ socket.on('renderTweets', function(stream) {
 	updatedStream += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" >'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" >@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'">'+place+'</a></span><br/>'+status+'</p></div>';
 	updatedStream += '</div>';
 					
-						//relative_time(tweet.created_at)
+	//relative_time(tweet.created_at)
 	$('#twitter-feed').html(updatedStream);
 });
          

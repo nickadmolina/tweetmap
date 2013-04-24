@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'MolinaTweetMap' });
+  res.render('index', { title: 'Tweet Map' });
 };

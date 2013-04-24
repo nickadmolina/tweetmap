@@ -1,19 +1,64 @@
-body {
-  background: #333;
+/*=======================
+   Tweetmap - styles.css
+   Nick Molina - 2013
+========================= */
+
+/*=======================
+   Bootstrap styles
+========================= */
+
+html,body {
+    height: 100%;
+}
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+.header{
+ 	height: 40px;
 }
 
-#logo{
-	float:left;
-	width: 400px;
-	margin-top: 20px;
-	margin-left: 80px;
+.container {
+    width: auto;
+    text-align:center;
 }
+ 	.container .credit {
+        margin: 20px 0;
+     }
+
+#logo {
+	float: left;
+}
+
+/*=======================
+       Map styles
+========================= */
 
 #map {
-  float:left;
-  margin-left:80px;
-  margin-top: 10px;
   background: #fff;
+  float:right;
+  margin-left:20px;
   width: 600px;
   height: 375px;
   border-radius: 12px; 
@@ -27,11 +72,31 @@ circle {
   stroke-width: 5px;
 }
 
-#info {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
+.rightfiller
+{
+	float:right;
+	height:200px;
+	width:150px;
+}
 
+#coords{
+  margin-left: 10px;
+  margin-top: 10px;
+  float:right;
+  width:320px;
+  height:200px;
+  text-align:center;
+
+}
+.locnum
+{
+	font-size:1.5em;
+	font-weight:bold;
+	color:#00ffde;
+}
+.loctext
+{
+	font-size: .75em;
 }
 
 .graticule {
@@ -58,18 +123,17 @@ circle {
   stroke: #00ffde;
 }
 
-footer
-{
-	position:relative;
-}
-/* Twitter styles */
+/*=======================
+   Twitter Feed Styles
+========================= */
 #twitter-feed {
 	float:left;
-	margin-top: 10px;
-	width:258px;
+	width:258px; 
 	font-family: Arial, Helvetica, sans-serif;
-	margin-left: 20px;
-	padding:8px 10px 5px 10px;
+	padding:8px 10px 5px 10px; 
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-bottom: 20px;
 	border-radius:12px;
     -moz-border-radius: 12px; 
     -webkit-border-radius: 12px; 
